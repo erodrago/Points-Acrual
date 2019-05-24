@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="150dp"
+                android:layout_height="130dp"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="80dp"
+                app:srcCompat="@drawable/fenix"
+                android:layout_gravity="center"
+                />
+
+
+            <EditText
+                android:id="@+id/edUname"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:background="@drawable/rounded_edittext"
+                android:drawableLeft="@drawable/ic_user"
+                android:ems="10"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="Username"
+                android:selectAllOnFocus="false"
+                android:inputType="textPersonName"
+                android:textSize="16sp"
+                android:textColorHint="@color/white_pressed"
+                android:layout_marginBottom="35dp"
+                android:drawableStart="@drawable/ic_user"
+                android:paddingLeft="10dp"/>
+
+            <EditText
+                android:id="@+id/edPassword"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:background="@drawable/rounded_edittext"
+                android:drawableLeft="@drawable/ic_lock"
+                android:ems="10"
+                android:hint="Password"
+                android:selectAllOnFocus="false"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColorHint="@color/white_pressed"
+                android:inputType="textPassword"
+                android:layout_marginBottom="40dp"
+                android:drawableStart="@drawable/ic_lock"
+                android:paddingLeft="10dp"/>
+
+            <Button
+                android:id="@+id/btnlogin"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:background="@drawable/buttonstylegradient"
+                android:layout_gravity="center"/>
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forgot password? Click here."
+                android:layout_gravity="center"
+                android:textColor="#fff"
+                android:layout_marginBottom="6dp" />
+
+
+            <Button
+                android:id="@+id/btnskip"
+                android:layout_width="100dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:text="Skip"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:background="@drawable/buttonstylegradient"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
