@@ -1,5 +1,6 @@
 package com.erodev.pointsaccrual;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Employee {
@@ -7,9 +8,9 @@ public class Employee {
     int empid;
     String empname;
     String seniority;
-    String empdate;
+    LocalDate empdate;
 
-    public Employee(int empid, String empname, String seniority, String empdate) {
+    public Employee(int empid, String empname, String seniority, LocalDate empdate) {
         this.empid = empid;
         this.empname = empname;
         this.seniority = seniority;
@@ -40,11 +41,11 @@ public class Employee {
         this.seniority = seniority;
     }
 
-    public String getEmpdate() {
+    public LocalDate getEmpdate() {
         return empdate;
     }
 
-    public void setEmpdate(String empdate) {
+    public void setEmpdate(LocalDate empdate) {
         this.empdate = empdate;
     }
 }
