@@ -8,9 +8,9 @@ public class Employee {
     int empid;
     String empname;
     String seniority;
-    LocalDate empdate;
+    String empdate;
 
-    public Employee(int empid, String empname, String seniority, LocalDate empdate) {
+    public Employee(int empid, String empname, String seniority, String empdate) {
         this.empid = empid;
         this.empname = empname;
         this.seniority = seniority;
@@ -41,11 +41,11 @@ public class Employee {
         this.seniority = seniority;
     }
 
-    public LocalDate getEmpdate() {
+    public String getEmpdate() {
         return empdate;
     }
 
-    public void setEmpdate(LocalDate empdate) {
+    public void setEmpdate(String empdate) {
         this.empdate = empdate;
     }
 }

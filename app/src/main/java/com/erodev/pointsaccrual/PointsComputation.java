@@ -2,24 +2,62 @@ package com.erodev.pointsaccrual;
 
 import android.os.Build;
 import android.support.annotation.RequiresApi;
+import android.util.Log;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class PointsComputation {
 
-    @RequiresApi(api = Build.VERSION_CODES.O)
-    public double calculatePoints(LocalDate date, String seniority){
+        public double calculatePoints(String date, String seniority){
 
-        double points = 0;
-        LocalDate today = LocalDate.now();
-        Period time = Period.between(date, today);
-        int months = time.getMonths();
+//        double points = 0;
+//        LocalDate today = LocalDate.now();
+//        Period time = Period.between(date, today);
+//        int months = time.getMonths();
+//
+//        points = months * seniorPoints(seniority) ;
+//        points = calcTenure(months) * points;
 
-        points = months * seniorPoints(seniority) ;
-        points = calcTenure(months) * points;
-        return points;
+
+
+//        date.concat(" 00:00:00");
+//
+//
+//        SimpleDateFormat dateFormat = new SimpleDateFormat(
+//                "yyyy/MM/dd HH:mm:ss");
+//
+//        try {
+//
+//            Date emplDate = dateFormat.parse(date);
+//
+//            Date currentDate = new Date();
+//
+//            long diff = currentDate.getTime() - emplDate.getTime();
+//            long seconds = diff / 1000;
+//            long minutes = seconds / 60;
+//            long hours = minutes / 60;
+//            long days = hours / 24;
+//
+//            long months = days/30;
+//
+//            return points;
+//
+//        } catch (ParseException e) {
+//
+//            e.printStackTrace();
+//        }
+
+
+        return 0;
+
     }
+
 
     public double seniorPoints(String letter){
         if(letter == "A"){
@@ -39,6 +77,7 @@ public class PointsComputation {
 
     }
 
+
     public double calcTenure(int months){
 
         if(months <= 2){
@@ -52,4 +91,7 @@ public class PointsComputation {
         }
         return 0;
     }
+
+
+
 }

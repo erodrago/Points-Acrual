@@ -22,14 +22,20 @@
             android:gravity="center"
             android:layout_margin="5dp">
 
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:layout_margin="2dp" >
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
+                android:orientation="horizontal"
                 android:paddingLeft="20dp"
                 android:layout_marginTop="5dp" >
                 <TextView
-                    android:id="@+id/tvempid"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="EMPLOYEE ID "
@@ -41,7 +47,7 @@
                     />
 
                 <TextView
-                    android:id="@+id/tvcountry"
+                    android:id="@+id/tvempid"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="1 "
@@ -55,20 +61,43 @@
 
             </LinearLayout>
 
-            <View
-                android:layout_width="2dp"
-                android:layout_height="match_parent"
-                android:layout_marginEnd="20dp"
-                android:layout_marginStart="20dp"
-                android:background="@color/white_pressed"
-
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:layout_marginTop="5dp" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EMPLOYEE NAME "
+                android:textSize="14sp"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textColor="@color/endblue"
 
                 />
+
+            <TextView
+                android:id="@+id/tvempname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1 "
+                android:textSize="14sp"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"
+                />
+
+
+        </LinearLayout>
+
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
+                android:orientation="horizontal"
                 android:paddingLeft="20dp"
                 android:layout_marginTop="5dp" >
                 <TextView
@@ -97,6 +126,9 @@
 
 
             </LinearLayout>
+
+
+    </LinearLayout>
             <View
                 android:layout_width="2dp"
                 android:layout_height="match_parent"
@@ -106,11 +138,15 @@
 
 
                 />
+
+
+
             <Button
-                android:id="@+id/btnskip"
+                android:id="@+id/btnwithdraw"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Redeem Points"
+                android:textSize="10dp"
                 android:textAllCaps="true"
                 android:textColor="@color/white"
                 android:background="@drawable/buttonstylegradient"

@@ -12,13 +12,16 @@
     <android.support.v7.widget.SearchView
         android:id="@+id/search_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:background="@color/white_pressed"
        />
 
     <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:scrollbars="vertical"
         android:layout_marginTop="20dp"></android.support.v7.widget.RecyclerView>
 
 </LinearLayout>
