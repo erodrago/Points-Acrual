@@ -38,7 +38,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="EMPLOYEE ID "
+                    android:text="EMPLOYEE ID: "
                     android:textSize="14sp"
                     android:textAllCaps="true"
                     android:textStyle="bold"
@@ -70,7 +70,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="EMPLOYEE NAME "
+                android:text="EMPLOYEE NAME: "
                 android:textSize="14sp"
                 android:textAllCaps="true"
                 android:textStyle="bold"
@@ -104,7 +104,7 @@
                     android:id="@+id/tvpoints"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="POINTS "
+                    android:text="POINTS: "
                     android:textSize="14sp"
                     android:textAllCaps="true"
                     android:textStyle="bold"

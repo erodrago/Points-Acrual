@@ -11,9 +11,10 @@
 
     <android.support.v7.widget.SearchView
         android:id="@+id/search_view"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@color/white_pressed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:iconifiedByDefault="false"
+        android:queryHint="Search Here"
        />
 
     <android.support.v7.widget.RecyclerView

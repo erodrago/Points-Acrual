@@ -1,7 +1,10 @@
 package com.erodev.pointsaccrual;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v7.widget.CardView;
@@ -22,10 +25,16 @@ public class AcrualRecyclerViewAdapter extends RecyclerView.Adapter<AcrualRecycl
     private Context mContext;
         private List<Employee> mEmployee;
 
+        PrefManager prefManager;
+
+
+
+
     public AcrualRecyclerViewAdapter(Context mContext, List<Employee> mEmployee) {
         this.mContext = mContext;
         this.mEmployee = mEmployee;
     }
+
 
     @Override
     public AcrualRecyclerViewAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -35,20 +44,32 @@ public class AcrualRecyclerViewAdapter extends RecyclerView.Adapter<AcrualRecycl
         return new MyViewHolder(view);
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     public void onBindViewHolder(AcrualRecyclerViewAdapter.MyViewHolder holder, final int position) {
 
         PointsComputation pc=new PointsComputation();
+        final Double points = pc.calculatePoints(mEmployee.get(position).getEmpdate(), mEmployee.get(position).getSeniority());
+
         holder.tvempid.setText(Integer.toString(mEmployee.get(position).getEmpid()));
-        holder.tvpoints.setText(Double.toString(pc.calculatePoints(mEmployee.get(position).getEmpdate(), mEmployee.get(position).getSeniority())));
+
+
+        holder.tvpoints.setText(Double.toString(points));
         holder.tvempname.setText(mEmployee.get(position).getEmpname());
 
         holder.btnwithdraw.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent login = new Intent(mContext, LoginActivity.class);
-                mContext.startActivity(login);
+                prefManager = new PrefManager(mContext);
+                if (!prefManager.isFirstTimeLaunch()) {
+                    Intent intent = new Intent(mContext,Withdraw.class);
+                    intent.putExtra("empposition", String.valueOf(mEmployee.get(position)));
+                    intent.putExtra("Name", mEmployee.get(position).getEmpname());
+                    mContext.startActivity(intent);
+
+                }else {
+                    Intent login = new Intent(mContext, LoginActivity.class);
+                    mContext.startActivity(login);
+                }
             }
         });
 
@@ -83,4 +104,7 @@ public class AcrualRecyclerViewAdapter extends RecyclerView.Adapter<AcrualRecycl
 
         }
     }
+
+
+
 }
