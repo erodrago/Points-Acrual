@@ -1,15 +1,15 @@
 package com.erodev.pointsaccrual;
 
 import android.content.Intent;
+import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 
 public class LoginActivity extends AppCompatActivity {
 
-    EditText username, password;
+    TextInputEditText username, password;
     Button login, skip;
 
 

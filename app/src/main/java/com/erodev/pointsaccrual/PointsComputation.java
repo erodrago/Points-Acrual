@@ -12,19 +12,19 @@ public class PointsComputation {
 
 
 
-        public double calculatePoints(String date, String seniority){
+    public double calculatePoints(String date, String seniority){
 
-            // Get months between these date and today.
+        // Get months between these date and today.
 
-            int months = noOfMonths(date);
+        int months = noOfMonths(date);
 
-            double points = 0;
+        double points = 0;
 
-            points = months * seniorPoints(seniority) ;
-            points = calcTenure(months) * points;
+        points = months * seniorPoints(seniority) ;
+        points = calcTenure(months) * points;
 
 
-            return points;
+        return points;
 
     }
 

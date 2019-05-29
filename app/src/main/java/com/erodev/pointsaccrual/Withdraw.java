@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -56,11 +57,15 @@ public class Withdraw extends AppCompatActivity {
         builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                pointstodeduct = (Double.valueOf(edpoints.getText().toString()));
-                Intent intent = new Intent(Withdraw.this,MainActivity.class);
-                intent.putExtra("deduct", pointstodeduct);
-                intent.putExtra("pos", position);
 
+                if(edpoints != null) {
+                    pointstodeduct = (Double.valueOf(edpoints.getText().toString()));
+                    Intent intent = new Intent(Withdraw.this, MainActivity.class);
+                    intent.putExtra("deduct", pointstodeduct);
+                    intent.putExtra("pos", position);
+                }else{
+//                    Toast.makeText(this,"Enter no of points to redeem", Toast.LENGTH_LONG).show();
+                }
 
                 finish();
             }

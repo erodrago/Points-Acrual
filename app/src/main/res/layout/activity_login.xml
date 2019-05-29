@@ -28,32 +28,38 @@
                 android:layout_gravity="center"
                 />
 
-
-            <EditText
+<android.support.design.widget.TextInputLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:passwordToggleEnabled="true">
+            <android.support.design.widget.TextInputEditText
                 android:id="@+id/edUname"
                 android:layout_width="250dp"
                 android:layout_height="40dp"
-                android:background="@drawable/rounded_edittext"
                 android:drawableLeft="@drawable/ic_user"
-
+                android:maxLines="1"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:hint="Username"
                 android:selectAllOnFocus="false"
-                android:inputType="textPersonName"
+                android:inputType="text"
                 android:textSize="16sp"
                 android:textColorHint="@color/white_pressed"
                 android:layout_marginBottom="35dp"
                 android:drawableStart="@drawable/ic_user"
-                android:paddingLeft="10dp"/>
+                android:paddingLeft="10dp" />
+</android.support.design.widget.TextInputLayout>
 
-            <EditText
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputEditText
                 android:id="@+id/edPassword"
                 android:layout_width="250dp"
                 android:layout_height="40dp"
-                android:background="@drawable/rounded_edittext"
                 android:drawableLeft="@drawable/ic_lock"
-
+                android:maxLines="1"
                 android:hint="Password"
                 android:selectAllOnFocus="false"
                 android:layout_gravity="center"
@@ -63,7 +69,7 @@
                 android:layout_marginBottom="40dp"
                 android:drawableStart="@drawable/ic_lock"
                 android:paddingLeft="10dp"/>
-
+            </android.support.design.widget.TextInputLayout>
             <Button
                 android:id="@+id/btnlogin"
                 android:layout_width="250dp"
