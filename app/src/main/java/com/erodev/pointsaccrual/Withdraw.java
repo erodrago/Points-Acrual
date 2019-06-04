@@ -47,6 +47,7 @@ public class Withdraw extends AppCompatActivity {
         });
 
 
+
     }
 
     private void showAlertDialog(){
@@ -61,8 +62,7 @@ public class Withdraw extends AppCompatActivity {
                 if(edpoints != null) {
                     pointstodeduct = (Double.valueOf(edpoints.getText().toString()));
                     Intent intent = new Intent(Withdraw.this, MainActivity.class);
-                    intent.putExtra("deduct", pointstodeduct);
-                    intent.putExtra("pos", position);
+
                 }else{
 //                    Toast.makeText(this,"Enter no of points to redeem", Toast.LENGTH_LONG).show();
                 }

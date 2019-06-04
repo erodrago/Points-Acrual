@@ -19,9 +19,9 @@ import java.util.List;
 public class AcrualRecyclerViewAdapter extends RecyclerView.Adapter<AcrualRecyclerViewAdapter.MyViewHolder> {
 
     private Context mContext;
-        private List<Employee> mEmployee;
+    private List<Employee> mEmployee;
 
-        PrefManager prefManager;
+    PrefManager prefManager;
 
 
 
@@ -44,7 +44,7 @@ public class AcrualRecyclerViewAdapter extends RecyclerView.Adapter<AcrualRecycl
     public void onBindViewHolder(AcrualRecyclerViewAdapter.MyViewHolder holder, final int position) {
 
         PointsComputation pc=new PointsComputation();
-        final Double points = pc.calculatePoints(mEmployee.get(position).getEmpdate(), mEmployee.get(position).getSeniority());
+        Double points = pc.calculatePoints(mEmployee.get(position).getEmpdate(), mEmployee.get(position).getSeniority());
 
         holder.tvempid.setText(Integer.toString(mEmployee.get(position).getEmpid()));
 
@@ -61,6 +61,7 @@ public class AcrualRecyclerViewAdapter extends RecyclerView.Adapter<AcrualRecycl
                     intent.putExtra("empposition", String.valueOf(mEmployee.get(position)));
                     intent.putExtra("Name", mEmployee.get(position).getEmpname());
                     mContext.startActivity(intent);
+
 
                 }else {
                     Intent login = new Intent(mContext, LoginActivity.class);

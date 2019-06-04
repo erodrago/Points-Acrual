@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
         prefManager = new PrefManager(this);
 
+
+
         emplist = new ArrayList<>();
         emplist.add(new Employee(1, "Ero", "B", "2016/01/02"));
         emplist.add(new Employee(2, "Ann", "C", "2018/11/12"));

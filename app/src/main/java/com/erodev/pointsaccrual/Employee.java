@@ -7,12 +7,30 @@ public class Employee {
     String empname;
     String seniority;
     String empdate;
+    Double points;
 
     public Employee(int empid, String empname, String seniority, String empdate) {
         this.empid = empid;
         this.empname = empname;
         this.seniority = seniority;
         this.empdate = empdate;
+    }
+
+
+    public Employee(int empid, String empname, String seniority, String empdate,Double points) {
+        this.empid = empid;
+        this.empname = empname;
+        this.seniority = seniority;
+        this.empdate = empdate;
+        this.points = points;
+    }
+
+    public Double getPoints() {
+        return points;
+    }
+
+    public void setPoints(Double points) {
+        this.points = points;
     }
 
     public int getEmpid() {
